@@ -42,7 +42,7 @@
     </script>
 </head>
 <body>
-<h2>HTML5 File Upload Progress Bar Tutorial</h2>
+<h2>HTML5 File Upload Progress Bar</h2>
 
 <form id="upload_form" enctype="multipart/form-data" method="post">
     <input type="file" name="file1" id="file1"><br>
@@ -62,11 +62,12 @@
         ?>
 
     </select>
-
     <br>
+    Description Here :<br>
     <input type="text" name="description" id="description">
     <br>
     <input type="button" value="Upload File" onclick="uploadFile()">
+    <br>
     <progress id="progressBar" value="0" max="100" style="width:300px;"></progress>
     <h3 id="status"></h3>
 

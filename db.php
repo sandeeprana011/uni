@@ -8,5 +8,8 @@ $databse='uniquexrana';
 $conn=mysqli_connect($host,$username,$password,$databse,'3306',null);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
+}else{
+    echo "connection established";
 }
+
 

@@ -1,0 +1,14 @@
+{
+  "name": "vendor/unique",
+  "description": "Description of project Unique.",
+  "authors": [
+    {
+      "name": "sandeeprana",
+      "email": "your@email.here"
+    }
+  ],
+  "require": {
+    "facebook/php-sdk-v4": "~5.0",
+    "php-ffmpeg/php-ffmpeg": "~0.5"
+  }
+}

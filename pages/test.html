@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<!--<?php-->
+<!--include '../db.php';-->
+
+<!--if (isset($_REQUEST['token'])) {-->
+<!--if (ctype_alnum($_REQUEST['token'])) {-->
+<!--$querry = "SELECT * FROM ux_video WHERE thumbnail=" . $token . ".gif LIMIT 5";-->
+<!--//    var_dump($querry);-->
+<!--$result = $conn->query($querry);-->
+<!--if ($result->num_rows > 0) {-->
+<!--//            var_dump($result);-->
+<!--} else {-->
+<!--//            echo "Video not found";-->
+<!--//            http_redirect("http://www.xxxunique.com");-->
+<!--}-->
+<!--} else "unwanted character found";-->
+<!--} else {-->
+<!--//    http_redirect("http://www.xxxunique.com");-->
+<!--//    echo "token not found";-->
+<!--exit(0);-->
+<!--}-->
+<!--?>-->
+<html lang="en">
+<head>
+
+    <meta property="og:url" content="http://www.xxxunique.com/videos.html"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content="Sunny Leone in SWAT"/>
+    <meta property="og:description" content="Sunny Leone in swat team. Time for a risky shot."/>
+    <meta property="og:image" content="http://www.xxxunique.com/images/office.jpg"/>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+    <title>Starter Template - Materialize</title>
+
+    <!-- CSS  -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!--  Scripts-->
+
+    <script>
+        window.fbAsyncInit = function () {
+            FB.init({
+                appId: '1519022465059371',
+                xfbml: true,
+                version: 'v2.5'
+            });
+        };
+
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) {
+                return;
+            }
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "//connect.facebook.net/en_US/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="../js/materialize.js"></script>
+    <script src="../js/init.js"></script>
+
+    <link href="http://vjs.zencdn.net/5.8.0/video-js.css" rel="stylesheet">
+
+    <!-- If you'd like to support IE8 -->
+    <script src="http://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
+    <!--    --><?php //echo $addScript?>
+    <link href="../css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/font-awesome.css"/>
+    <script>
+        $(document).ready(function () {
+            $("button-collapse").sideNav();
+            $("#sharebutton").click(function () {
+                $("#share").toggle(500);
+            });
+        });
+
+    </script>
+    <style>
+        .padding10x {
+            padding: 5px;
+        }
+
+        .margin10x {
+            margin: 10px;
+        }
+
+        .card-custom {
+            padding: 0px;
+
+        }
+    </style>
+
+
+    <!--    <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>-->
+</head>
+
+<body>
+<div id="fb-root"></div>
+<script>(function (d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s);
+    js.id = id;
+    js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1";
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<div class="navbar-fixed">
+    <nav class="pink darken-1">
+        <div class="nav-wrapper">
+            <a href="#" class="brand-logo"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;XXXUnique.com</a>
+            <a href="#" data-activates="mobile-demo" onclick="$(this).sideNav();" class="button-collapse"><i
+                    class="material-icons">menu</i></a>
+            <ul class="right hide-on-med-and-down">
+                <li>
+                    <form>
+                        <div class="input-field">
+                            <input id="search" type="search" required>
+                            <label for="search"><i class="material-icons">search</i></label>
+                            <i class="material-icons">close</i>
+                        </div>
+                    </form>
+                </li>
+                <li><a href="../pages/sexfriend.php">Sex Friend</a></li>
+                <li><a href="../pages/videos.php">Videos</a></li>
+                <li><a href="../pages/images.php">Images</a></li>
+                <li><a href="../pages/jokes.php">Jokes</a></li>
+                <li><a href="../pages/chat.php">Chat</a></li>
+                <li><a class="fa fa-facebook" href="#">b login</a></li>
+            </ul>
+            <ul class="side-nav" id="mobile-demo">
+                <li>
+                    <form>
+                        <div class="input-field teal lighten-3">
+                            <input id="search" type="search" required>
+                            <label for="search"><i class="material-icons">search</i></label>
+                            <i class="material-icons accent-2">close</i>
+                        </div>
+                    </form>
+                </li>
+                <li><a href="../pages/sexfriend.php">Sex Friend</a></li>
+                <li><a href="../pages/videos.php">Videos</a></li>
+                <li><a href="../pages/images.php">Images</a></li>
+                <li><a href="../pages/jokes.php">Jokes</a></li>
+                <li><a href="../pages/chat.php">Chat</a></li>
+                <li><a class="fa fa-facebook" href="#">b login</a></li>
+            </ul>
+        </div>
+    </nav>
+</div>
+<!--Row intermediate-->
+<div class="row blue-grey lighten-3">
+    <br><br>
+    <!--    --><?php //require_once '../site/sidebar.php' ?>
+
+    <div class="col s1 m1 l1">
+        <br>
+    </div>
+    <div class="col s12 m12 l6">
+        <div>
+            <video id="really-cool-video" class="video-js vjs-big-play-centered" controls
+                   preload="auto" width="100%" height="auto" poster="really-cool-video-poster.jpg"
+                   data-setup='{}'>
+                <source src="../Videos/bbbbb.mp4" type="video/mp4">
+                <source src="../Videos/bbbbb.mp4" type="video/webm">
+                <p class="vjs-no-js col s12 m12 l6">
+                    To view this video please enable JavaScript, and consider upgrading to a web browser
+                    that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+                </p>
+            </video>
+        </div>
+        <br>
+        <style>
+            .padd {
+                margin: 10px;
+            }
+        </style>
+        <div>
+            <!--Likes and ratings here-->
+        </div>
+        <div class="col s12 m12 l12 card card-panel">
+            <div>
+                <button class="waves-effect waves-light btn col s11 m5 l3 padd"><i
+                        class="material-icons left fa fa-download"></i>Download
+                </button>
+                <button id="sharebutton" class="waves-effect waves-light btn col s11 m5 l3 padd"><i
+                        class="material-icons left fa fa-share"></i>Share
+                </button>
+                <button class="waves-effect waves-light btn col s11 m5 l4 padd"><i
+                        class="material-icons left fa fa-clock-o"></i>Watch
+                    Later
+                </button>
+                <div class="col s12 m12 l12 card padding10x" id="share" style="display: none; height: 60px">
+                    <!-- Your share button code -->
+                    <div class="fb-share-button"
+                         data-href="http://www.xxxunique.com/videos.html"
+                         data-layout="button_count">
+                    </div>
+
+                </div>
+            </div>
+
+            <h4 class="">
+                Sunny Leone in S.W.A.T
+            </h4>
+
+            <div class="card-content">
+                Yes it is sunny leone in SWAT. I hope you could understand the risk of having a pornstar as a securty
+                personnel.
+                This might be a vulnerability in the Security System.
+                As we all know that a pornstar can start below job at any time. Even when she is on duty.
+            </div>
+
+            <div class="card-action">
+                <div class="row">
+                    <form class="col s12">
+                        <div class="row">
+                            <div class="input-field col s12 l12 m12">
+                                <input placeholder="put your comment here..." id="first_name" type="text"
+                                       class="validate">
+                                <label for="first_name">Your comment</label>
+                            </div>
+                            <button type="reset" class="btn btn-block"
+                                    onclick="Materialize.toast('Comment is not available now', 4000)">
+                                Comment
+                            </button>
+                        </div>
+
+                    </form>
+                </div>
+                <div id="comments" class="col s12 m12 l12">
+                    <h5 class="cyan-text">Comments</h5>
+
+                    <ul class="collection">
+                        <li class="collection-item avatar">
+                            <img src="../images/office.jpg" alt="" class="circle">
+                            <span class="title cyan-text darken-3">Title</span>
+
+                            <p>First Line
+                            </p>
+
+                        </li>
+                        <li class="collection-item avatar">
+                            <img src="../images/office.jpg" alt="" class="circle">
+                            <span class="title cyan-text darken-3">Title</span>
+
+                            <p>Second Line
+                            </p>
+
+                        </li>
+                        <li class="collection-item avatar">
+                            <img src="../images/office.jpg" alt="" class="circle">
+                            <span class="title cyan-text darken-3">Title</span>
+
+                            <p>First Line
+                            </p>
+
+                        </li>
+                        <li class="collection-item avatar">
+                            <img src="../images/office.jpg" alt="" class="circle">
+                            <span class="title cyan-text darken-3">Title</span>
+
+                            <p>First Line
+                            </p>
+
+                        </li>
+                    </ul>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    <div class="col s11 m11 l4">
+        <div class="col s12 m12 l12">
+            <img src="../images/advertisement.jpg" style="width: inherit;height: inherit;">
+        </div>
+
+
+        <div class="row" style="padding: 10px">
+            <ul>
+                <li class="col s12 m12 l12 white">
+                    <a href="#">
+                        <div style="">
+                            <img class="col m4 s4 l4" src="../images/office.jpg" height="75px" width="100px">
+
+                            <h5>Sunny Leone</h5>
+                            <span>This is sunny leone</span>
+                        </div>
+                    </a>
+                </li>
+
+                <li class="col s12 m12 l12 white">
+                    <a href="#">
+                        <div style="">
+                            <img class="col m4 s4 l4" src="../images/office.jpg" height="75px" width="100px">
+
+                            <h5>Sunny Leone</h5>
+                            <span class="truncate   ">This is sunny leone</span>
+                        </div>
+                    </a>
+                </li>
+
+                <li class="col s12 m12 l12 white">
+                    <a href="#">
+                        <div style="">
+                            <img class="col m4 s4 l4" src="../images/office.jpg" height="75px" width="100px">
+
+                            <h5>Sunny Leone</h5>
+                            <span>This is sunny leone</span>
+                        </div>
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+
+
+    </div>
+    <div class="col s1 m1 l1">
+        <br>
+    </div>
+</div>
+<?php require_once '../site/footer.php' ?>
+</body>
+</html>

@@ -21,25 +21,31 @@ $description=$_POST['description'];
 
 
 function makeThumb($filePath,$fileName,$p_id,$description,$cat_id,$user_id,$status,$connect) {
-    $fileHashName=hash('md5',$fileName);
-    echo "Starting ffmpeg...\n\n";
+    $fileHashName=hash('md5',$fileName) . ".gif";
+    echo "<br>Starting ffmpeg...<br>\n\n";
 //    echo shell_exec("ffmpeg -ss 3 -i bbb.mp4 -vframes 20 -s 420x270 Out.jpg ");
     var_dump($filePath);
 //    echo shell_exec("ffmpeg -v warning -ss 2 -t 0.8 -i ".$filePath." -vf scale=200:-1 -gifflags +transdiff -y ".$fileHashName.".gif");
-    echo shell_exec("ffmpeg -v warning -ss 2 -t 0.8 -i bbbbb.mp4 -vf scale=200:-1 -gifflags +transdiff -y arom.gif");
+    $openfile=fopen("image_config.txt","a");
+    $texttowrite=$filePath."`thumb/".$fileHashName."\n";
+    fwrite($openfile,$texttowrite);
+    fclose($openfile);
+
+//    echo shell_exec("ffmpeg -v warning -ss 2 -t 0.8 -i bbbbb.mp4 -vf scale=200:-1 -gifflags +transdiff -y arom.gif");
 
 //    $sql = "INSERT INTO  ux_video () VALUES (".$fileName.", ".$p_id.", ".$description.",".$cat_id.",NOW(),false,".$filePath.",".$user_id.",".$status.",".$fileHashName);
     $sql = "INSERT INTO `uniquexrana`.`ux_video` (`video_id`, `video_name`, `pornstar_id`, `description`, `category_id`, `time_upload`, `delete_video`, `path_video`, `user_id`, `status`, `thumbnail`)
 VALUES (NULL, '".$fileName."', '".$p_id."', '".$description."', '".$cat_id."', CURRENT_TIMESTAMP, '0', '".$filePath."', '".$user_id."', '".$status."', '".$fileHashName."');";
 
 
+
     if($connect->query($sql)===TRUE){
-        echo 'inserted data';
+        echo '<br>inserted data<br>';
     }else{
-        echo 'insertion failed';
+        echo '<br>insertion failed<br>';
     };
 
-    echo "Done.\n";
+    echo "<br>Done.\n";
 }
 
 
@@ -101,6 +107,7 @@ function mover($filePath,$fileTmpLoc,$fileName,$pornstar_id,$description,$conn,$
     }
 }
 
+$conn->close();
 
 
 ?>
